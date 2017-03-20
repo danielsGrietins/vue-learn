@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 1</title>
+</head>
+<body>
+<div class="root">
+    <input type="text" id="input" v-model="message"><br>
+    Value: {{ message }}
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+    let data =  {
+        message: 'Hello world'
+    };
+    new Vue({
+        el: '.root',
+        data: data
+    });
+</script>
+</body>
+</html>

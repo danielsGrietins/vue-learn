@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 3</title>
+</head>
+<body>
+<div class="root">
+    <ul>
+        <li v-for="name in names">{{ name }}</li>
+    </ul>
+
+    <br><br>
+
+    <input type="text"><br>
+    <button>Add name</button>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+    new Vue({
+        el: '.root',
+        data: {
+            names: ['Joe', 'Jim', 'Trey']
+        },
+        mounted() {
+            alert(1);
+        }
+    });
+</script>
+</body>
+</html>

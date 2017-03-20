@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 6</title>
+</head>
+<body>
+    <div class="root">
+        <h1>Task list</h1>
+        <ul>
+            <li v-for="task in tasks" v-text="task.description"></li>
+        </ul>
+
+        <h1>Incompleted Tasks list</h1>
+        <ul>
+            <li v-for="task in inCompletedTasks" v-text="task.description"></li>
+        </ul>
+    </div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+    new Vue({
+        el: '.root',
+        data: {
+            message: 'Ayy',
+            tasks: [
+                { description: 'Got to the store', completed: true },
+                { description: 'Open your bussines', completed: false },
+                { description: 'Buy a new car', completed: true },
+                { description: 'Take out your girlfiend', completed: true },
+            ]
+        },
+        computed: {
+            inCompletedTasks() {
+                return this.tasks.filter(task => !task.completed);
+            }
+    }
+    });
+</script>
+</body>
+</html>

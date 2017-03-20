@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 1</title>
+</head>
+<body>
+<div class="root">
+    <button :title="title">Hover</button>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+    var app = new Vue({
+        el: '.root',
+        data: {
+            title: 'This is new title'
+        }
+    });
+</script>
+</body>
+</html>

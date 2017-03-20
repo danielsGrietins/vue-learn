@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <style>
+        body {
+            margin: 2%;
+        }
+    </style>
+</head>
+<body>
+<div class="root">
+    <modal v-show="isVisible" @close="isVisible = false">
+        <p class="image is-4by3">
+            <img src="http://bulma.io/images/placeholders/1280x960.png">
+        </p>
+    </modal>
+    <button class="button is-primary" @click="launchModal">Launch modal</button>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
