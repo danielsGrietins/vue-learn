@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue lesson LESSONNUMBER</title>
+    <title>Vue lesson 15</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
     <style>
         body {
@@ -12,6 +12,18 @@
 </head>
 <body>
     <div class="root container">
+
+        <progress-view inline-template>
+            <div>
+                <h1>
+                    This is progress: {{ progress }}%
+                </h1>
+
+                <p>
+                    <button class="button is-primary" @click="progress += 10" v-show="progress < 100">Update rate</button>
+                </p>
+            </div>
+        </progress-view>
 
     </div>
 

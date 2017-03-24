@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue lesson 14</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+    <style>
+        body {
+            margin: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <button class="button is-primary" @click="showModal">Launch modal</button>
+        <modal v-show="isModalVisible">
+            <template slot="header">asd</template>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, voluptatum?
+
+            <template slot="footer">
+                <a class="button is-success">Save changes</a>
+                <a class="button">Cancel</a>
+            </template>
+        </modal>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
